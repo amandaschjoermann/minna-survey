@@ -1,0 +1,86 @@
+<div class="navbar d-flex bg-dark p-3 text-white">
+  <div class="logo">A logo</div>
+  <div class="content">Some content</div>
+</div>
+
+<div class="top-banner">
+  <h1>Kandidattest</h1>
+</div>
+
+<div class="survey-container text-center">
+  <div class="introduction-section">
+    <h2>Hvem er du mest enig med?</h2>
+
+    <p>Med fucking Minnas kandidattest kan du se, hvilke partier og politikere du er mest enig med. Måske kan du endda blive en smule klogere på, hvem du skal stemme på til folketingsvalget.</p>
+
+    <hr/>
+
+    <p class="small-p">Testen består af 20 spørgsmål, og du kan springe op til fem spørgsmål over.</p>
+  </div>
+
+  <hr/>
+
+  <div class="container margin-x">
+    <h2>Hvis jeg skulle stemme nu, ville jeg stemme på</h2>
+    <%= form_for @politician do |f|  %>
+      <div class="row my-5">
+        <% @parties.each do |parti| %>
+          <div class="col-12 col-sm-4">
+
+            <%= f.radio_button "select-parti", "test", checked: false %>
+            <%= f.label "select-parti", class: 'parti-button' do %>
+              <div class="parti-logo mr-2">B</div>
+              <div class="parti-name"> <%= parti %> </div>
+            <% end %>
+
+          </div>
+        <% end %>
+
+      </div>
+      <p class="text-danger cursor mb-5 pb-4">SPRING OVER</p>
+
+    <% end %>
+  </div>
+
+
+
+  <%= form_for @question_answers do |f|  %>
+    <p class="font-weight-bold">1/20 SUNDHED</p>
+
+    <h2 class="my-4">Afgiften på cigaretter skal sættes op</h2>
+
+    <p class="dropdown-text">ARGUMENTER FOR OG IMOD <span class="icon text-danger"><i class="fas fa-chevron-up"></i></span> </p>
+    <div class="argument-dropdown row justify-content-center align-items-center">
+
+      <div class="info-box col-12 col-sm-4">
+        <p class="font-weight-bold">IMOD</p>
+        <p>Der findes allerede afgifter på cigaretter. En højere afgift kan skabe mere grænsehandel og indsmugling af cigaretter. Rygning er et personligt valg, som staten ikke skal blande sig i.</p>
+      </div>
+      <div class="col-12 col-sm-1 d-flex justify-content-center pt-5">
+        <div class="vertical-line d-none d-sm-inline"></div>
+      </div>
+
+      <div class="info-box col-12 col-sm-4">
+        <p class="font-weight-bold">FOR</p>
+        <p>En højere afgift vil gøre det dyrere at købe cigaretter. Det kan betyde, at færre vil begynde at ryge, og det vil spare sundhedsvæsenet for store udgifter.</p>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center flex-column flex-sm-row">
+      <span class="font-weight-bold">UENIG</span>
+      <% @values.each do |value| %>
+        <%= f.radio_button "question-1", "test", checked: false %>
+        <%= f.label "question-1", class: 'form-label' do %>
+          <i class="<%= value[:icon] %> icon-hover icon-click"></i>
+        <% end %>
+        <hr class="form-line d-none d-sm-inline">
+      <% end %>
+      <span class="font-weight-bold">ENIG</span>
+    </div>
+
+    <p class="dark-hover text-danger mt-5 ">SPRING SPØRGSMÅLET OVER</p>
+
+
+  <% end %>
+</div>
