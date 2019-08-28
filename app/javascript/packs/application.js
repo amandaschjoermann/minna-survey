@@ -1,6 +1,8 @@
 import 'bootstrap';
 
 // $("input").hide();
+// $(".icon-click").not(current).removeClass('fas');
+// $(".icon-click").not(current).addClass('far');
 
 // QUESTION FORM
 $(document).on('click', '.icon-click', function() {
@@ -11,8 +13,13 @@ $(document).on('click', '.icon-click', function() {
   current.addClass('fas');
   current.removeClass('far');
 
-  $(".icon-click").not(current).removeClass('fas');
-  $(".icon-click").not(current).addClass('far');
+  const iconsForm = current.parent().parent()[0]
+  iconsForm.querySelectorAll(".icon-click").forEach((element) => {
+    if (element !== this) {
+      element.classList.remove('fas');
+      element.classList.add('far');
+    }
+  })
 
   $(current).removeClass('icon-hover');
   $(".icon-click").not(current).addClass('icon-hover');
