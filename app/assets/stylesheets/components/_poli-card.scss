@@ -2,6 +2,7 @@
   margin-top: 100px;
   height: 125px;
   width: 100%;
+  box-shadow: 0 0 10px rgba(210,210,210,1);
   background-color: #F6F6F6;
   position: relative;
   .party {
@@ -22,15 +23,21 @@
     left: -30px;
     opacity: 0.6;
   }
+  .poli-image {
+    width: 175px;
+    display: flex;
+    justify-content: start;
+
+  }
   .poli-image img {
     height: 125px;
     width: 125px;
   }
   .poli-percent {
-    width: 125px;
+    width: 175px;
     text-align: center;
     .percent {
-      font-size: 54px;
+      font-size: 46px;
       font-weight: bold;
     }
     .agreed {
@@ -38,7 +45,7 @@
     }
   }
   .poli-info {
-    min-width: 125px;
+    min-width: 175px;
     hr {
       margin: 10px auto;
       width: 25%;
@@ -73,3 +80,72 @@ a {
     text-decoration: none;
   }
 }
+
+.poli-card-mobile {
+  margin-top: 100px;
+  height: 125px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(210,210,210,1);
+  background-color: #F6F6F6;
+  position: relative;
+  .party {
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    height: 40px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blue;
+  }
+  .poli-number {
+    position: absolute;
+    bottom: -35px;
+    left: 10px;
+    opacity: 0.6;
+  }
+  .poli-image {
+    width: 175px;
+    display: flex;
+    justify-content: start;
+
+  }
+  .poli-image img {
+    height: 125px;
+    width: 125px;
+  }
+  .poli-percent {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: -40px;
+    right: 10px;
+    text-align: center;
+    .percent {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .agreed {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  }
+  .poli-info {
+    min-width: 175px;
+    hr {
+      margin: 10px auto;
+      width: 25%;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .age {
+      font-size: 18x;
+    }
+  }
+}
+
+
