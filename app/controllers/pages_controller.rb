@@ -59,6 +59,10 @@ class PagesController < ApplicationController
     ]
   end
 
+  def results
+    raise
+  end
+
   def politicians
     @politicians = Politician.order(name: :asc)
   end
