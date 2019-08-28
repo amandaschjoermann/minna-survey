@@ -1,0 +1,12 @@
+<ul>
+<% @politicians.each do |politician| %>
+  <li>
+    <h2><%= politician.name %></h2>
+    <% #if ActionController::Base.helpers.resolve_asset_path(politician.image) %>
+      <%= image_tag politician.image, alt: "alttext", width: 130 %>
+    <% # end %>
+    <h4><%= politician.age %> years old</h4>
+    <h4><%= politician.party %></h4>
+  </li>
+<% end %>
+</ul>
