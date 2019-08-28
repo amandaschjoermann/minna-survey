@@ -29,9 +29,9 @@ CSV.foreach(csv_path, csv_options) do |row|
   end
 end
 
-minna = DummyUser.create
-answers = %w(B B C B C C B B D D B C B C C D D C D D D D C B D C D)
+# minna = DummyUser.create
+# answers = %w(B B C B C C B B D D B C B C C D D C D D D D C B D C D)
 
-answers.each_with_index do |answer, idx|
-  ans = Answer.create!(question_number: idx + 1, dummy_user: minna, weight: WEIGHTS[answer])
-end
+# answers.each_with_index do |answer, idx|
+#   ans = Answer.create!(question_number: idx + 1, dummy_user: minna, weight: WEIGHTS[answer])
+# end

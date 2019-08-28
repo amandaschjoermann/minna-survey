@@ -11,7 +11,7 @@ class DummyUser < ApplicationRecord
       pol_answers = pol.pol_answers.order(question_number: :asc)
       answers.each_with_index do |answer, idx|
         pol_ans = pol_answers[idx]
-        next if pol_ans.weight == 0
+        next if [answer.weight, pol_ans.weight].include?(0)
         score += get_score_for_answers([answer.weight, pol_ans.weight].sort)
       end
       match_hash[pol] = ((score.fdiv(270)) * 100).round(1)
