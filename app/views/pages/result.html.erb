@@ -1,25 +1,27 @@
 <h1 class="font-weight-bold mb-4">Resultatet af dine svar</h1>
 <p>Her kan du se, hvilke kandidater der har svaret mest som dig. Husk at testen kun er udtryk for hvor enig du er med nedenstående politikere.</p>
-<div class="poli-card d-flex justify-content-between align-items-center">
-  <div class="party">Name of party</div>
-  <div class="poli-number">1.</div>
-  <div class="poli-image">
-    <%= image_tag "https://external-preview.redd.it/DTlvR52nxNSfjjnqw5fA-yI5J1gZJgFixg4lITWSmo0.jpg?auto=webp&s=3ceb3897dbdfa64588d3498680bbf1628c6027ba", alt: "alttext" %>
+<% @top_five.each_with_index do |politician_score, idx| %>
+  <% politician = politician_score.first %>
+  <% score = politician_score.last %>
+  <div class="poli-card d-flex justify-content-between align-items-center">
+    <div class="party"><%= politician.party %></div>
+    <div class="poli-number"><%= idx + 1 %></div>
+    <div class="poli-image">
+      <%= image_tag politician.image, alt: "alttext" %>
+    </div>
+    <div class="poli-info">
+      <div class="name"><%= politician.name %></div>
+      <hr>
+      <div class="age"><%= "#{politician.age} år" %></div>
+    </div>
+    <div class="poli-percent">
+      <div class="percent"><%= "#{score}%" %></div>
+      <div class="agreed">enig</div>
+    </div>
   </div>
-  <div class="poli-info">
-    <div class="name">Name</div>
-    <hr>
-    <div class="age">40 år</div>
-  </div>
-  <div class="poli-percent">
-    <div class="percent">77%</div>
-    <div class="agreed">enig</div>
-  </div>
-</div>
 
 <div class="margin-top"></div>
 <p>Du kan tage testen igen og se, om du ender med en anden kandidat.</p>
 
 <%= link_to root_path do %>
   <div class="try-again">TAG TESTEN IGEN</div>
-<% end %>

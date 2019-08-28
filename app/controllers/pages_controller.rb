@@ -60,7 +60,12 @@ class PagesController < ApplicationController
   end
 
   def results
-    raise
+    user = DummyUser.create
+    (1..27).each do |num|
+      weight = params["question#{num}"].present? ? params["question#{num}"].to_i : 0
+      Answer.create(dummy_user: user, question_number: num, weight: weight)
+    end
+    redirect_to top_five_path(user)
   end
 
   def politicians
@@ -68,5 +73,7 @@ class PagesController < ApplicationController
   end
 
   def result
+    user = DummyUser.find(params[:user_id])
+    @top_five = user.top_five
   end
 end
