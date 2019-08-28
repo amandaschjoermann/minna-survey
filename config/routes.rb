@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#survey'
   get 'politicians', to: 'pages#politicians'
 
-
+  post '/', to: 'pages#results', as: :results
 
   get 'result/:user_id', to: 'pages#result', as: :top_five
 

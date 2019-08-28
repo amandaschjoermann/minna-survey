@@ -1,17 +1,17 @@
 <div class="introduction-section">
-    <h2>Hvem er du mest enig med?</h2>
+    <h2>Hvøjum er tú mest samd/ur við?</h2>
 
-    <p>Med fucking Minnas kandidattest kan du se, hvilke partier og politikere du er mest enig med. Måske kan du endda blive en smule klogere på, hvem du skal stemme på til folketingsvalget.</p>
+    <p>Við hesari valevniskanningini kanst tú síggja hvønn flokk og hvønn politikkara, tú ert mest samd/ur við. Kanska kanningin kann hjálpa tær at gerast klókari um, hvønn tú eventuelt kundi stemmað uppá til løgtingsvalið.</p>
 
     <hr/>
 
-    <p class="small-p">Testen består af 27 spørgsmål, og du kan springe op til fem spørgsmål over.</p>
+    <p class="small-p">Kanningin hevur 27 spurningar, og tú kanst velja ikki at svara upp til 5 av spurningunum.</p>
   </div>
 
   <hr/>
 
   <div class="container margin-x">
-    <h2>Hvis jeg skulle stemme nu, ville jeg stemme på</h2>
+    <h2>Um eg skuldi stemme nú, hevði eg stemma uppá </h2>
     <%= form_for @politician do |f|  %>
       <div class="row my-5">
         <% @parties.each do |parti| %>
@@ -27,7 +27,7 @@
         <% end %>
 
       </div>
-      <p class="text-danger cursor mb-5 pb-4">SPRING OVER</p>
+      <p class="text-danger cursor mb-5 pb-4">VEIT IKKI</p>
 
     <% end %>
   </div>
@@ -37,7 +37,7 @@
     <% @questions.each do |key, value| %>
       <div class="margin-top"></div>
       <p class="font-weight-bold">
-        Spørgsmål <%= question_number %> / <%= @questions.count %>
+        Spurningur <%= question_number %> / <%= @questions.count %>
       </p>
 
       <h2 class="my-4 mb-5">
@@ -70,7 +70,7 @@
       <% end %>
 
       <div class="form-icons d-flex justify-content-center align-items-center flex-column flex-sm-row">
-        <span class="font-weight-bold">&nbsp;&nbsp;UENIG&nbsp;&nbsp;</span>
+        <span class="font-weight-bold">&nbsp;&nbsp;Púra Ósamd/ur&nbsp;&nbsp;</span>
         <% @values.each do |value| %>
           <%= f.radio_button "#{key}", "#{value[:value]}", checked: false, id: "#{key}-#{value}" %>
           <%= f.label "#{key}", class: 'form-label', id: "#{question_number}" do %>
@@ -80,10 +80,10 @@
             <hr class="form-line d-none d-sm-inline">
           <% end %>
         <% end %>
-        <span class="font-weight-bold">&nbsp;&nbsp;ENIG&nbsp;&nbsp;</span>
+        <span class="font-weight-bold">&nbsp;&nbsp;Púra Samd/ur&nbsp;&nbsp;</span>
       </div>
 
-      <p class="dark-hover text-danger mt-5 ">SPRING SPØRGSMÅLET OVER</p>
+      <p class="dark-hover text-danger mt-5 jump-to-next">VEIT IKKI</p>
 
 
       <% question_number += 1 %>
@@ -92,7 +92,7 @@
       <hr/>
     <%= f.submit "SE RESULTAT", class: "submit-button" %>
   <% end %>
-  <p class="mt-5">Nøkur valevni, ið stilla upp til hetta løgtingsvalið hava ikki svarað kanningini, og eru tískil ikki eitt møguligt úrslit.</p>
+  <p class="mt-5">Summir politikkarir, ið stilla upp hetta løgtingsvalið hava ikki svarað kanningini, og eru tískil ikki ein svar møguleiki. Allir hava tó fingið møguleikan til tess.</p>
 
 <!-- <div class="progress">
   <div class="row">

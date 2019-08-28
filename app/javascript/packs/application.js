@@ -43,6 +43,10 @@ $(document).on('click', '.dropdown-text', function() {
   $(".argument-dropdown").slideToggle('slow')
 });
 
+$('.jump-to-next').on('click', function() {
+  var elem = $(".jump-to-next").eq( $(".jump-to-next").index( $(this) ))
+  $(window).animate ({scrollTop:0}, 500);
+});
 
 
 // $(document).on('click', 'label', function() {

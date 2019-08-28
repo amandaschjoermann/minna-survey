@@ -3,20 +3,24 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MinnaSurvey</title>
+    <title>Løgtingsval 2019</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag 'icon.png' %>
+    <%= favicon_link_tag 'survey-red.png' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <div class="navbar d-flex bg-dark p-3 text-white">
-    <div class="logo">A logo</div>
-    <div class="content">Some content</div>
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "survey-white.png", alt: "logo" %>
+      <% end %>
+    </div>
+    <div class="content">Løgtingsval 2019</div>
   </div>
 
   <div class="top-banner">
-    <h1>Kandidattest</h1>
+    <h1>Valevniskanning</h1>
   </div>
   <div class="survey-container text-center">
 

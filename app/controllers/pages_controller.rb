@@ -1,8 +1,14 @@
 class PagesController < ApplicationController
   def survey
 
+    politicians = Politician.order(name: :asc)
+    parties = []
+    politicians.each do |politician|
+      parties << politician.party
+    end
+    @parties = parties.uniq
+
     @politician = "Test again"
-    @parties = ["Parti 1", "Parti 2", "Parti 3", "Parti 4", "Parti 5", "Parti 6", "Parti 7", "Parti 8", "Parti 9"]
     @question_answers = ""
     @questions = {
       question1: {question: "Føroyar skulu loysa frá Danmark"},

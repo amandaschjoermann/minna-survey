@@ -3,20 +3,53 @@
 <% @top_five.each_with_index do |politician_score, idx| %>
   <% politician = politician_score.first %>
   <% score = politician_score.last %>
-  <div class="poli-card d-flex justify-content-between align-items-center">
-    <div class="party"  style="background-color: <%= politician.party_color %>;"><%= politician.party %></div>
-    <div class="poli-number"><%= idx + 1 %></div>
-    <div class="poli-image">
-      <%= image_tag politician.image, alt: "alttext" %>
-    </div>
-    <div class="poli-info">
-      <div class="name"><%= politician.name %></div>
-      <hr>
-      <div class="age"><%= "#{politician.age} år" %></div>
-    </div>
-    <div class="poli-percent">
-      <div class="percent"><%= "#{score.round}%" %></div>
-      <div class="agreed">enig</div>
+
+
+  <div class="d-none d-sm-block">
+    <div class="poli-card d-flex justify-content-between align-items-center">
+      <div class="party"><%= politician.party %></div>
+      <div class="poli-number"><%= idx + 1 %></div>
+      <div class="poli-image">
+        <%= image_tag politician.image, alt: "alttext" %>
+      </div>
+      <div class="poli-info">
+        <div class="name"><%= politician.name %></div>
+        <hr>
+        <div class="age"><%= "#{politician.age} år" %></div>
+      </div>
+      <div class="poli-percent">
+        <div class="percent"><%= "#{score.round(0)}%" %></div>
+        <div class="agreed">enig</div>
+      </div>
     </div>
   </div>
+
+  <div class="d-block d-sm-none">
+    <div class="poli-card-mobile d-flex justify-content-between align-items-center">
+      <div class="party"><%= politician.party %></div>
+      <div class="poli-percent">
+        <div class="percent"><%= "#{score.round(0)}%" %></div>
+        <div class="agreed">enig</div>
+      </div>
+      <div class="poli-number"><%= idx + 1 %></div>
+      <div class="poli-image">
+        <%= image_tag politician.image, alt: "alttext" %>
+      </div>
+      <div class="poli-info">
+        <div class="name"><%= politician.name %></div>
+        <hr>
+        <div class="age"><%= "#{politician.age} år" %></div>
+      </div>
+
+    </div>
+  </div>
+
 <% end %>
+
+<div class="margin-top"></div>
+<p>Du kan tage testen igen og se, om du ender med en anden kandidat.</p>
+
+<%= link_to root_path do %>
+  <div class="try-again">TAG TESTEN IGEN</div>
+<% end %>
+
