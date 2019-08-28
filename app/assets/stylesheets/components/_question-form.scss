@@ -4,6 +4,10 @@ label.form-label i {
   margin: 0px 0px;
 }
 
+.red {
+  color: red;
+}
+
 .icon-hover:hover {
   opacity: 0.5;
 }
@@ -22,4 +26,19 @@ form p {
 
 .dropdown-text {
   cursor: pointer;
+}
+
+.margin-top {
+  margin-top: 150px;
+}
+
+.progress {
+  padding: 20px;
+  font-size: 16px;
+  height: 100%;
+  background-color: red;
+  color: white;
+  i {
+    margin: 5px 5px;
+  }
 }
