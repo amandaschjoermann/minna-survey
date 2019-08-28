@@ -36,7 +36,7 @@
   <%= form_for @question_answers do |f|  %>
     <% @questions.each do |key, value| %>
       <div class="margin-top"></div>
-      <p class="font-weight-bold">
+      <p class="font-weight-bold" id="question-title-<%= question_number %>">
         Spurningur <%= question_number %> / <%= @questions.count %>
       </p>
 
@@ -69,7 +69,7 @@
         </div>
       <% end %>
 
-      <div class="form-icons d-flex justify-content-center align-items-center flex-column flex-sm-row">
+      <div class="form-icons d-flex justify-content-center align-items-center flex-column flex-sm-row" id="question-icons-container-<%= question_number %>" data-question-id="<%= question_number %>">
         <span class="font-weight-bold">&nbsp;&nbsp;Púra Ósamd/ur&nbsp;&nbsp;</span>
         <% @values.each do |value| %>
           <%= f.radio_button "#{key}", "#{value[:value]}", checked: false, id: "#{key}-#{value}" %>

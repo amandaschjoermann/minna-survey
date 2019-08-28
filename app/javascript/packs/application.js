@@ -13,7 +13,8 @@ $(document).on('click', '.icon-click', function() {
   current.addClass('fas');
   current.removeClass('far');
 
-  const iconsForm = current.parent().parent()[0]
+  const iconsForm = current.parent().parent()[0];
+  const questionId = parseInt(iconsForm.dataset.questionId, 10);
   iconsForm.querySelectorAll(".icon-click").forEach((element) => {
     if (element !== this) {
       element.classList.remove('fas');
@@ -23,6 +24,14 @@ $(document).on('click', '.icon-click', function() {
 
   $(current).removeClass('icon-hover');
   $(".icon-click").not(current).addClass('icon-hover');
+
+  if (questionId < 27) {
+    document.getElementById(`question-title-${questionId + 1}`).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start' //scroll to top of the target element
+    });
+
+  }
 });
 
 // PARTI FORM
