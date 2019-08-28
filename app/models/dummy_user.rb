@@ -9,7 +9,7 @@ class DummyUser < ApplicationRecord
     Politician.all.each do |pol|
       score = 0
       pol_answers = pol.pol_answers.order(question_number: :asc)
-      answers.each_with_index do |answer, idx|
+      answers.order(question_number: :asc).each_with_index do |answer, idx|
         pol_ans = pol_answers[idx]
         next if [answer.weight, pol_ans.weight].include?(0)
         score += get_score_for_answers([answer.weight, pol_ans.weight].sort)
