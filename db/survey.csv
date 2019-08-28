@@ -1,7 +1,7 @@
-name,party,age,answer1,answer2,answer3,answer4,answer5,answer6,answer7,answer8,answer9,answer10,answer11,answer12,answer13,answer14,answer15,answer6,answer17,answer18,answer19,answer20,answer21,answer22,answer23,answer24,answer25,answer26,answer27
+name,party,age,answer1,answer2,answer3,answer4,answer5,answer6,answer7,answer8,answer9,answer10,answer11,answer12,answer13,answer14,answer15,answer16,answer17,answer18,answer19,answer20,answer21,answer22,answer23,answer24,answer25,answer26,answer27
 Jens Arni Leo Hammerfoss,Javnaðarflokkurin,33,B,B,D,B,D,D,B,B,D,D,A,C,B,C,C,D,D,C,C,C,D,A,B,C,D,D,C
 Hans Jacob Thomsen,Javnaðarflokkurin,44,B,B,C,A,D,C,B,A,C,C,A,C,C,D,B,C,C,B,B,C,D,B,D,C,D,D,D
-Jóhannis Joensen,Javnaðarflokkurin,48,B,C,C,B,D,C,B,B,C,B,B,C,B,B,?,C,C,B,B,C,C,B,C,C,C,C,C
+Jóhannis Joensen,Javnaðarflokkurin,48,B,C,C,B,D,C,B,B,C,B,B,C,B,B,PASS,C,C,B,B,C,C,B,C,C,C,C,C
 Eyðgunn Samuelsen,Javnaðarflokkurin,60,B,C,D,C,D,D,A,C,D,C,A,C,A,B,B,D,C,B,C,B,D,C,C,C,D,D,B
 Marita Klein Joensen,Javnaðarflokkurin,31,B,B,C,B,D,B,C,B,D,D,A,C,B,C,C,D,D,C,B,C,D,A,D,B,D,D,B
 Kristina Roest,Javnaðarflokkurin,32,A,D,D,A,C,B,B,A,B,D,A,A,B,B,D,D,D,A,D,D,D,A,D,C,D,D,D
@@ -9,7 +9,7 @@ Jónleif Johannesen,Javnaðarflokkurin,41,B,B,D,B,D,D,B,A,D,D,C,C,A,B,C,D,D,B,B,
 Birna Heinesen,Javnaðarflokkurin,32,B,C,C,B,D,C,C,A,D,C,C,D,B,B,D,D,D,C,C,C,D,A,C,C,D,D,C
 Bjørg Dam,Javnaðarflokkurin,43,D,D,B,A,D,B,B,B,D,D,A,C,A,A,B,D,D,A,A,A,D,C,D,D,D,D,A
 Nina Dahl,Sambandsflokkurin,66,A,C,D,A,C,D,A,C,C,C,B,B,D,C,C,D,D,A,D,C,C,D,B,C,C,B,B
-Villads Bøgesvang,Sambandsflokkurin,49,A,D,C,A,C,B,A,C,D,C,C,C,BC?,A,C,D,C,A,C,B,D,C,C,C,D,D,D
+Villads Bøgesvang,Sambandsflokkurin,49,A,D,C,A,C,B,A,C,D,C,C,C,PASS,A,C,D,C,A,C,B,D,C,C,C,D,D,D
 Hans Marius E. Høgnesen,Sambandsflokkurin,28,A,C,D,B,C,B,A,D,B,D,C,A,C,B,A,C,D,B,C,B,C,D,A,C,C,C,D
 Rógvi Nybo,Tjóðveldi,30,D,A,C,A,D,D,C,C,C,C,A,C,A,D,A,D,D,A,D,D,D,A,D,C,D,D,D
 Jóhan Christiansen,Tjóðveldi,41,D,A,D,A,D,D,A,B,D,C,A,D,C,A,A,D,D,A,C,B,C,B,B,C,D,D,D
@@ -24,9 +24,9 @@ Rósa Tyril Gaardlykke,Miðflokkurin,25,C,B,C,B,B,B,A,B,D,C,C,C,A,C,A,B,C,A,B,C,
 Steffan Klein Poulsen,Miðflokkurin,23,B,C,C,B,B,C,A,A,D,C,B,C,C,B,A,A,C,A,A,B,B,C,C,B,B,C,D
 Anna Margretha Otthamar,Miðflokkurin,54,B,C,C,B,B,C,A,B,B,D,A,A,D,D,A,A,C,A,B,A,D,D,C,A,D,D,C
 Jóna Jógvan-Hendriksdóttir Nicolajsen,Miðflokkurin,33,C,C,D,A,C,D,PASS,A,D,A,D,C,D,B,A,C,C,A,C,B,D,C,PASS,D,C,C,D
-Margretha Kjærbæk,Miðflokkurin,47,B,B,C,B,C,C,A,B,D,C,B,B,C,B,A,A,C,A,A,A,B,C,C,C,Pass,C,D
-Bjarta Petersen,Miðflokkurin,40,C,C,C,B,D,C,A,C,A,BC?,B,A,D,A,A,A,D,A,A,A,C,C,PASS,C,B,A,
-Hanus Vang,Framtakið,72,C,A,B,B,C,C,C,A,C,C,B,C,B,?,B,C,C,B,C,B,C,C,C,C,C,C,C
+Margretha Kjærbæk,Miðflokkurin,47,B,B,C,B,C,C,A,B,D,C,B,B,C,B,A,A,C,A,A,A,B,C,C,C,PASS,C,D
+Bjarta Petersen,Miðflokkurin,40,C,C,C,B,D,C,A,C,A,PASS,B,A,D,A,A,A,D,A,A,A,C,C,PASS,C,B,A,PASS
+Hanus Vang,Framtakið,72,C,A,B,B,C,C,C,A,C,C,B,C,B,PASS,B,C,C,B,C,B,C,C,C,C,C,C,C
 Dan Klein,Framtakið,68,C,B,C,B,C,C,A,C,A,B,A,C,B,C,C,C,D,B,D,C,C,C,B,B,D,D,D
 Ragnar Eyvindsson,Framtakið,32,B,D,C,A,B,A,A,C,D,B,A,A,B,A,A,D,D,B,D,D,D,B,B,D,D,A,D
 Pól Huus Sólstein,Fólkaflokkurin,50,C,B,C,A,B,B,B,B,C,C,B,C,C,B,B,C,C,B,B,C,C,C,B,B,C,C,C

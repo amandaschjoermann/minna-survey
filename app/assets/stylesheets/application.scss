@@ -12,6 +12,12 @@
 @import "components/index";
 @import "pages/index";
 
+
+.polpic {
+  width: 130px;
+  border-radius: 50%;
+}
+
 input[type=submit] {
   display: block !important;
   margin: 0 auto;
