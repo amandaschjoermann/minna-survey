@@ -10,4 +10,8 @@ class PagesController < ApplicationController
       { value: 4, icon: 'far fa-laugh'}
     ]
   end
+
+  def politicians
+    @politicians = Politician.order(name: :asc)
+  end
 end
