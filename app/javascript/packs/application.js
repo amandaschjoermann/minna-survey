@@ -25,13 +25,12 @@ $(document).on('click', '.icon-click', function() {
 
   $(current).removeClass('icon-hover');
   $(".icon-click").not(current).addClass('icon-hover');
-
-  if (questionId < 27) {
+  console.log(window.innerWidth)
+  if ((questionId < 27) && (window.innerWidth > 800)) {
     document.getElementById(`question-title-${questionId + 1}`).scrollIntoView({
       behavior: 'smooth',
       block: 'start' //scroll to top of the target element
     });
-
   }
 });
 
