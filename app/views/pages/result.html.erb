@@ -26,7 +26,7 @@
 
   <div class="d-block d-sm-none">
     <div class="poli-card-mobile d-flex justify-content-between align-items-center">
-      <div class="party"><%= politician.party %></div>
+      <div class="party" style="background-color: <%= politician.party_color %>"><%= politician.party %></div>
       <div class="poli-percent">
         <div class="percent"><%= "#{score.round(0)}%" %></div>
         <div class="agreed">enig</div>
