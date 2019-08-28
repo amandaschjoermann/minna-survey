@@ -1,5 +1,5 @@
-<h1 class="font-weight-bold mb-4">Resultatet af dine svar</h1>
-<p>Her kan du se, hvilke kandidater der har svaret mest som dig. Husk at testen kun er udtryk for hvor enig du er med nedenstående politikere.</p>
+<h1 class="font-weight-bold mb-4">Títt úrslit</h1>
+<p>Her sært tú, hvørjir politikkarir, tú ert mest samd/ur við. Minst tó til, at valevniskanningin bert er vegleiðandi.</p>
 <% @top_five.each_with_index do |politician_score, idx| %>
   <% politician = politician_score.first %>
   <% score = politician_score.last %>
@@ -47,9 +47,9 @@
 <% end %>
 
 <div class="margin-top"></div>
-<p>Du kan tage testen igen og se, om du ender med en anden kandidat.</p>
+<p>Royn kanningina umaftur, kanska tú endar við einum øðrum valevnið.</p>
 
 <%= link_to root_path do %>
-  <div class="try-again">TAG TESTEN IGEN</div>
+  <div class="try-again">ROYND KANNINGINA UMAFTUR</div>
 <% end %>
 
