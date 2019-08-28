@@ -54,8 +54,12 @@ $(document).on('click', '.dropdown-text', function() {
 });
 
 $('.jump-to-next').on('click', function() {
-  var elem = $(".jump-to-next").eq( $(".jump-to-next").index( $(this) ))
-  $(window).animate ({scrollTop:0}, 500);
+
+    const questionId = parseInt(this.dataset.questionId, 10);
+   document.getElementById(`question-title-${questionId + 1}`).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start' //scroll to top of the target element
+    });
 });
 
 
