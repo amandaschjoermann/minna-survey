@@ -1,0 +1,54 @@
+.poli-card {
+  margin-top: 100px;
+  height: 125px;
+  width: 100%;
+  background-color: #F6F6F6;
+  position: relative;
+  .party {
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    height: 40px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blue;
+  }
+  .poli-number {
+    position: absolute;
+    top: 40%;
+    left: -30px;
+  }
+  .poli-image img {
+    height: 125px;
+    width: 125px;
+  }
+  .poli-percent {
+    padding-right: 20px;
+    width: 125px;
+    text-align: center;
+    .percent {
+      font-size: 54px;
+      font-weight: bold;
+    }
+    .agreed {
+      font-size: 20px;
+    }
+  }
+  .poli-info {
+    min-width: 125px;
+    hr {
+      margin: 10px auto;
+      width: 25%;
+    }
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .age {
+      font-size: 24px;
+    }
+  }
+}

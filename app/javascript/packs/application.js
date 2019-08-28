@@ -1,6 +1,6 @@
 import 'bootstrap';
 
-$("input").hide();
+// $("input").hide();
 
 // QUESTION FORM
 $(document).on('click', '.icon-click', function() {
