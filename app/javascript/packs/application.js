@@ -1,6 +1,7 @@
 import 'bootstrap';
 
-// $("input").hide();
+$("input").hide();
+
 // $(".icon-click").not(current).removeClass('fas');
 // $(".icon-click").not(current).addClass('far');
 
@@ -57,19 +58,5 @@ $('.jump-to-next').on('click', function() {
   $(window).animate ({scrollTop:0}, 500);
 });
 
-
-// $(document).on('click', 'label', function() {
-//   var currentQuestion = $(this)
-//   var currentId = currentQuestion.attr("id")
-//   var nextId = parseInt(currentId) + 1;
-
-//   var nextQuestion = currentQuestion.find("#2")
-//   console.log(nextQuestion)
-
-//   // $('html, body').animate({
-//   //     scrollTop: nextQuestion.offset().top
-//   // }, 1000);
-
-// });
 
 

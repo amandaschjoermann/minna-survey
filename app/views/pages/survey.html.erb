@@ -10,28 +10,6 @@
 
   <hr/>
 
-  <div class="container margin-x">
-    <h2>Um eg skuldi stemme nú, hevði eg stemma uppá </h2>
-    <%= form_for @politician do |f|  %>
-      <div class="row my-5">
-        <% @parties.each do |parti| %>
-          <div class="col-12 col-sm-4">
-
-            <%= f.radio_button "select-parti", "test", checked: false %>
-            <%= f.label "select-parti", class: 'parti-button' do %>
-              <div class="parti-logo mr-2">B</div>
-              <div class="parti-name"> <%= parti %> </div>
-            <% end %>
-
-          </div>
-        <% end %>
-
-      </div>
-      <p class="text-danger cursor mb-5 pb-4">VEIT IKKI</p>
-
-    <% end %>
-  </div>
-
   <% question_number = 1 %>
   <%= form_for @question_answers do |f|  %>
     <% @questions.each do |key, value| %>
@@ -92,7 +70,7 @@
       <hr/>
     <%= f.submit "SE RESULTAT", class: "submit-button" %>
   <% end %>
-  <p class="mt-5">Summir politikkarir, ið stilla upp hetta løgtingsvalið hava ikki svarað kanningini, og eru tískil ikki ein svar møguleiki. Allir hava tó fingið møguleikan til tess.</p>
+  <p class="mt-5 smaller-font" >Summir politikkarir, ið stilla upp hetta løgtingsvalið hava ikki svarað kanningini, og eru tískil ikki ein svar møguleiki. Allir hava tó fingið møguleikan til tess.</p>
 
 <!-- <div class="progress">
   <div class="row">
