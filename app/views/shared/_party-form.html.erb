@@ -1,0 +1,21 @@
+<div class="container margin-x">
+  <h2>Um eg skuldi stemme nú, hevði eg stemma uppá </h2>
+  <%= form_for @politician do |f|  %>
+    <div class="row my-5">
+      <% @parties.each do |parti| %>
+        <div class="col-12 col-sm-4">
+
+          <%= f.radio_button "select-parti", "test", checked: false %>
+          <%= f.label "select-parti", class: 'parti-button' do %>
+            <div class="parti-logo mr-2">B</div>
+            <div class="parti-name"> <%= parti %> </div>
+          <% end %>
+
+        </div>
+      <% end %>
+
+    </div>
+    <p class="text-danger cursor mb-5 pb-4">VEIT IKKI</p>
+
+  <% end %>
+</div>
