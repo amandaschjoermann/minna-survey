@@ -1,5 +1,4 @@
-<div class="survey-container text-center">
-  <div class="introduction-section">
+<div class="introduction-section">
     <h2>Hvem er du mest enig med?</h2>
 
     <p>Med fucking Minnas kandidattest kan du se, hvilke partier og politikere du er mest enig med. Måske kan du endda blive en smule klogere på, hvem du skal stemme på til folketingsvalget.</p>
@@ -73,7 +72,7 @@
       <div class="form-icons d-flex justify-content-center align-items-center flex-column flex-sm-row">
         <span class="font-weight-bold">&nbsp;&nbsp;UENIG&nbsp;&nbsp;</span>
         <% @values.each do |value| %>
-          <%= f.radio_button "#{key}", "#{value[:value]}", checked: false, id: "#{key}" %>
+          <%= f.radio_button "#{key}", "#{value[:value]}", checked: false, id: "#{key}-#{value}" %>
           <%= f.label "#{key}", class: 'form-label', id: "#{question_number}" do %>
             <i class="<%= value[:icon] %> icon-hover icon-click"></i>
           <% end %>
@@ -94,7 +93,6 @@
     <%= f.submit "SE RESULTAT", class: "submit-button" %>
   <% end %>
   <p class="mt-5">Nøkur valevni, ið stilla upp til hetta løgtingsvalið hava ikki svarað kanningini, og eru tískil ikki eitt møguligt úrslit.</p>
-</div>
 
 <!-- <div class="progress">
   <div class="row">

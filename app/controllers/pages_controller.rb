@@ -66,4 +66,7 @@ class PagesController < ApplicationController
   def politicians
     @politicians = Politician.order(name: :asc)
   end
+
+  def result
+  end
 end
