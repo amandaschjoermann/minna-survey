@@ -1,5 +1,4 @@
 require 'csv'
-require 'pry-byebug'
 
 Answer.destroy_all
 PolAnswer.destroy_all
@@ -20,12 +19,7 @@ CSV.foreach(csv_path, csv_options) do |row|
   attributes[:image] = clean_string("#{row[0].split.first.downcase}_#{row[1].downcase}.jpg")
   pol = Politician.create!(attributes)
   (1..27).each do |qnum|
-    begin
-      p_ans = PolAnswer.create!(question_number: qnum, politician: pol, weight: WEIGHTS[row["answer#{qnum}"]] )
-    rescue ActiveRecord::RecordInvalid
-      binding.pry
-      puts "h"
-    end
+    p_ans = PolAnswer.create!(question_number: qnum, politician: pol, weight: WEIGHTS[row["answer#{qnum}"]] )
   end
 end
 

@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 class DummyUser < ApplicationRecord
   has_many :answers
 
