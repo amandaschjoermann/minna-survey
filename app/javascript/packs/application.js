@@ -38,7 +38,18 @@ $(document).on('click', '.dropdown-text', function() {
 
 
 
+// $(document).on('click', 'label', function() {
+//   var currentQuestion = $(this)
+//   var currentId = currentQuestion.attr("id")
+//   var nextId = parseInt(currentId) + 1;
 
+//   var nextQuestion = currentQuestion.find("#2")
+//   console.log(nextQuestion)
 
+//   // $('html, body').animate({
+//   //     scrollTop: nextQuestion.offset().top
+//   // }, 1000);
+
+// });
 
 

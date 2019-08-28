@@ -17,3 +17,18 @@
   width: 130px;
   border-radius: 50%;
 }
+
+input[type=submit] {
+  display: block !important;
+  margin: 0 auto;
+  color: white;
+  font-weight: 100;
+  background-color: #FF001E;
+  transition: 0.1s;
+  padding: 10px 20px;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(20,20,20,1);
+}
