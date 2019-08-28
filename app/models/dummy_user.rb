@@ -1,5 +1,5 @@
 class DummyUser < ApplicationRecord
-  has_many :answers
+  has_many :answers, dependent: :destroy
 
   def score_against_all
     match_hash = {}
