@@ -21,13 +21,6 @@ hr.form-line {
   margin: 0 0;
   padding: 0;
   width: 75px;
-  &:last-child {
-    display: none;
-  }
-}
-
-form hr:last-of-type {
-  display: none;
 }
 
 .vertical-line {
