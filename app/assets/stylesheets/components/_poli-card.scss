@@ -20,13 +20,13 @@
     position: absolute;
     top: 40%;
     left: -30px;
+    opacity: 0.6;
   }
   .poli-image img {
     height: 125px;
     width: 125px;
   }
   .poli-percent {
-    padding-right: 20px;
     width: 125px;
     text-align: center;
     .percent {
@@ -50,5 +50,26 @@
     .age {
       font-size: 24px;
     }
+  }
+}
+
+.try-again {
+  cursor: pointer;
+  color: rgba(20,20,20,1);
+  border: 1px solid rgba(20,20,20,1);
+  padding: 10px 20px;
+  transition: 0.1s;
+  width: 200px;
+  margin: 0 auto;
+  &:hover {
+    color: white;
+    background-color: rgba(20,20,20,1);
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
   }
 }
