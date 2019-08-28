@@ -6,6 +6,17 @@ Politician.destroy_all
 DummyUser.destroy_all
 
 WEIGHTS = { 'A' => 1, 'B' => 2, 'C' => 3, 'D' => 4, 'PASS' => 0 }
+COLORS = {
+  "Fólkaflokkurin" => "#008D3C",
+  "Sambandsflokkurin" => "#00698B",
+  "Sjálvstýri" => "#FF007C",
+  "Javnaðarflokkurin" => "#B40127",
+  "Miðflokkurin" => "#0079C5",
+  "Tjóðveldi" => "#3A4B58",
+  "Framtakið" => "#FBE100",
+  "Framsókn" => "#FF8D00"
+}
+
 
 csv_path = File.join(__dir__, 'survey.csv')
 csv_options = { headers: :first_row}
@@ -15,7 +26,7 @@ def clean_string(string)
 end
 
 CSV.foreach(csv_path, csv_options) do |row|
-  attributes = { name: row[0], party: row[1], age: row[2].to_i }
+  attributes = { name: row[0], party: row[1], party_color: COLORS[row[1]], age: row[2].to_i }
   attributes[:image] = clean_string("#{row[0].split.first.downcase}_#{row[1].downcase}.jpg")
   pol = Politician.create!(attributes)
   (1..27).each do |qnum|

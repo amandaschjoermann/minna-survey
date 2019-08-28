@@ -4,7 +4,7 @@
   <% politician = politician_score.first %>
   <% score = politician_score.last %>
   <div class="poli-card d-flex justify-content-between align-items-center">
-    <div class="party"><%= politician.party %></div>
+    <div class="party"  style="background-color: <%= politician.party_color %>;"><%= politician.party %></div>
     <div class="poli-number"><%= idx + 1 %></div>
     <div class="poli-image">
       <%= image_tag politician.image, alt: "alttext" %>
