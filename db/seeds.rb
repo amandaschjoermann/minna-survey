@@ -22,7 +22,7 @@ csv_path = File.join(__dir__, 'survey.csv')
 csv_options = { headers: :first_row}
 
 def clean_string(string)
-  string.tr("ðáíýóø", "daiyoo")
+  string.tr("ðáíýóøæ", "daiyooa")
 end
 
 CSV.foreach(csv_path, csv_options) do |row|
