@@ -7,6 +7,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag 'survey-red.png' %>
+    <meta property="og:title" content="Løgtingsval 2019" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://loegtingsval2019.herokuapp.com/" />
+    <meta property="og:image" content="<%= image_path 'facebook-image.jpg' %>" />
+    <meta property="og:description" content="Hvørjum ert tú mest samd/ur við?" />
+    <meta property="og:site_name" content="Løgtingsval 2019" />
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
