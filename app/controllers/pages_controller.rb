@@ -48,7 +48,7 @@ class PagesController < ApplicationController
         imod: "Tað kann koma fyri at heilar bygdir bert vera feriu íbúðir hjá útlendingum. Tá vit longu hava búðstaðartrupulleikar í Føroyum, skulu húsinum í Føroyum vera til føroyingar."
       },
       question9: {
-        question: "Ferðafólk skulu gjalda eitt ferðaavgjald, tá tey koma til Føroya",
+        question: "Ferðafólk skulu gjalda meira enn føroyingar fyri at nýta tær almennu farleiðirnar",
         for: "Ferðavinnuna hava vit fyri at fáa mest møguliga inntøku. Ikki fyri at fáa flest møgulig fólk til landið. Við at lata tey sigla, koyra (í Havn) og enntá flúgva ókeypis ella nærum ókeypis, fáa vit nógv fólk – men útreiðslur. Við at taka hægri pening fyri almennu ferðaleiðirnar fáa Føroyar eina inntøku heldur enn útreiðslu.",
         imod: "Um ferðafólk skulu gjalda meir enn føroyingar, gera vit mun á fólki. Hetta er ikki rætt, og kann herumframt skapa eina ringa umtalu um Føroyar. Tað kann hava við sær, at færri ferðafólk koma til Føroya."
       },
