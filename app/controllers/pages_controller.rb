@@ -123,6 +123,10 @@ class PagesController < ApplicationController
     ]
   end
 
+  def stats
+    @last_dummy_user = DummyUser.last
+  end
+
   def results
     user = DummyUser.create
     (1..27).each do |num|

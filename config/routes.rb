@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   post '/', to: 'pages#results', as: :results
 
+  get 'stats', to: 'pages#stats'
+
   get 'result/:user_id', to: 'pages#result', as: :top_five
 
   post '/', to: 'pages#results', as: :result_form

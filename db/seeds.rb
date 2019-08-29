@@ -1,9 +1,9 @@
 require 'csv'
 
-Answer.destroy_all
+# Answer.destroy_all
 PolAnswer.destroy_all
 Politician.destroy_all
-DummyUser.destroy_all
+# DummyUser.destroy_all
 
 WEIGHTS = { 'A' => 1, 'B' => 2, 'C' => 3, 'D' => 4, 'PASS' => 0 }
 COLORS = {
